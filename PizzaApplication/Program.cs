@@ -8,8 +8,7 @@
     int[] ItemQuantities = new int[10];
     double[] ItemPrices = new double[10];
     int ItemCount = 0;
-
-#hello
+//Hello
 
 }
     
