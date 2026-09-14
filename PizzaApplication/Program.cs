@@ -1,8 +1,9 @@
-﻿string[] Pizza = { "Margherita", "Pepperoni", "Hawaiian", "Veggie", "BBQ Chicken" };
-string[] Drinks = { "Coke", "Pepsi", "Sprite", "Fanta", "Water" };
+﻿
 
 public class Menu
 {
+    string[] Pizza = { "Margherita", "Pepperoni", "Hawaiian", "Veggie", "BBQ Chicken" };
+    string[] Drinks = { "Coke", "Pepsi", "Sprite", "Fanta", "Water" };
     public string[] GetPizzaMenu()
     {
         return Pizza;
