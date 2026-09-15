@@ -2,19 +2,19 @@
 
 public class main
 {
-    static string[] Pizzas = { "Margherita", "Pepperoni", "Hawaiian", "Veggie", "BBQ Chicken" };
-    static string[] Drinks = { "Coke", "Pepsi", "Sprite", "Fanta", "Water" };
-    static double[] PizzaPrices = { 8.99, 9.99, 10.99, 9.49, 11.49 };
-    static double[] DrinkPrices = { 1.99, 1.99, 1.99, 1.99, 0.99 };
-    static string[] ItemsOrdered = new string[10];
-    static int[] ItemQuantities = new int[10];
-    static double[] ItemPrices = new double[10];
-    static int ItemCount = 0;
+    string[] Pizzas = { "Margherita", "Pepperoni", "Hawaiian", "Veggie", "BBQ Chicken" };
+    string[] Drinks = { "Coke", "Pepsi", "Sprite", "Fanta", "Water" };
+    double[] PizzaPrices = { 8.99, 9.99, 10.99, 9.49, 11.49 };
+    double[] DrinkPrices = { 1.99, 1.99, 1.99, 1.99, 0.99 };
+    string[] ItemsOrdered = new string[10];
+    int[] ItemQuantities = new int[10];
+    double[] ItemPrices = new double[10];
+    int ItemCount = 0;
 
 
     /* Add to Order */
 
-    static void AddtoOrder(string name, int quantity, double price) 
+    public void AddtoOrder(string name, int quantity, double price) 
     {
         if (ItemCount < 10)
         {
@@ -34,18 +34,18 @@ public class main
     }
 
     /*Total & Sales Tax*/
-    static double CalcTotal()
+    public double CalcTotal()
     {
-        double Temptotal = 0;
+        double Subtotal = 0;
         double Total;
 
         for (int i = 0; i < ItemCount; i++)
         {
-            Temptotal += ItemPrices[i] * ItemQuantities[i];
+            Subtotal += ItemPrices[i] * ItemQuantities[i];
         }
 
-        double SalesTax = Temptotal * 0.06;
-        Total = Temptotal + SalesTax;
+        double SalesTax = Subtotal * 0.06;
+        Total = Subtotal + SalesTax;
 
         return Total;
     }
