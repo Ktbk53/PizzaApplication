@@ -33,6 +33,23 @@ public class main
         }
     }
 
+    /*Total & Sales Tax*/
+    static double CalcTotal()
+    {
+        double Temptotal = 0;
+        double Total;
+
+        for (int i = 0; i < ItemCount; i++)
+        {
+            Temptotal += ItemPrices[i] * ItemQuantities[i];
+        }
+
+        double SalesTax = Temptotal * 0.06;
+        Total = Temptotal + SalesTax;
+
+        return Total;
+    }
+
 }
     
 
