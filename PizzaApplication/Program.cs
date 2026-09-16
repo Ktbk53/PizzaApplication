@@ -14,7 +14,7 @@ public class main
 
     /* Add to Order */
 
-    public void AddtoOrder(string name, int quantity, double price) 
+    public void AddToOrder(string name, int quantity, double price) 
     {
         if (ItemCount >= 10)
         {
