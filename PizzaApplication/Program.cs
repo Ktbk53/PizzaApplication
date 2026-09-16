@@ -14,7 +14,7 @@ public class main
 
     /* Add to Order */
 
-    public void AddToOrder(string name, int quantity, double price) 
+    private void AddToOrder(string name, int quantity, double price) 
     {
         if (ItemCount >= 10)
         {
@@ -35,7 +35,7 @@ public class main
     }
 
     /*Total & Sales Tax*/
-    public double CalcTotal()
+    private double CalcTotal()
     {
         double Subtotal = 0;
         double Total;
