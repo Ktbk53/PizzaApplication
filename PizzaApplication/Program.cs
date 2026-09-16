@@ -16,7 +16,13 @@ public class main
 
     public void AddtoOrder(string name, int quantity, double price) 
     {
-        if (ItemCount < 10)
+        if (ItemCount >= 10)
+        {
+            Console.WriteLine("Order Full");
+            return;
+        }
+
+        else 
         {
             ItemsOrdered[ItemCount] = name;
             ItemQuantities[ItemCount] = quantity;
@@ -25,11 +31,6 @@ public class main
             ItemCount++;
 
             Console.WriteLine($"Added {name} x {quantity} to order");
-        }
-
-        else 
-        {
-            Console.WriteLine("Order Full");
         }
     }
 
