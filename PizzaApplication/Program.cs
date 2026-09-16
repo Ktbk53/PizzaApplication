@@ -54,14 +54,14 @@ public class main
 
     public void ViewOrder()
     {
-    Console.WriteLine("\n--- Current Order ---");
+        Console.WriteLine("\n--- Current Order ---");
 
-    for (int i = 0; i < ItemCount; i++)
-    {
-        Console.WriteLine($"{ItemsOrdered[i]} x {ItemQuantities[i]} - ${ItemPrices[i]:F2}");
-    }
+        for (int i = 0; i < ItemCount; i++)
+        {
+            Console.WriteLine($"{ItemsOrdered[i]} x {ItemQuantities[i]} - ${ItemPrices[i]:F2}");
+        }
 
-    Console.WriteLine($"Total: ${CalcTotal():F2}");
+        Console.WriteLine($"Total: ${CalcTotal():F2}");
     }
 
 
@@ -69,20 +69,20 @@ public class main
 
     public void Checkout()
     {
-    ViewOrder();
+        ViewOrder();
 
-    Console.Write("Checkout? (Y/N): ");
-    string choice = Console.ReadLine();
+        Console.Write("Checkout? (Y/N): ");
+        string choice = Console.ReadLine();
 
-    if (choice.ToUpper() == "Y")
-    {
-        Console.WriteLine("Checkout confirmed.");
-        PrintReceipt();
-    }
-    else
-    {
-        Console.WriteLine("Checkout cancelled.");
-    }
+        if (choice.ToUpper() == "Y")
+        {
+            Console.WriteLine("Checkout confirmed.");
+            PrintReceipt();
+        }
+        else
+        {
+            Console.WriteLine("Checkout cancelled.");
+        }
     }
 
 
@@ -90,27 +90,27 @@ public class main
 
     public void PrintReceipt()
     {
-    Console.WriteLine("\n--- RECEIPT ---");
+        Console.WriteLine("\n--- RECEIPT ---");
 
-    double subtotal = 0;
+        double subtotal = 0;
 
-    for (int i = 0; i < ItemCount; i++)
-    {
-        double itemTotal = ItemPrices[i] * ItemQuantities[i];
-        subtotal += itemTotal;
+        for (int i = 0; i < ItemCount; i++)
+        {
+            double itemTotal = ItemPrices[i] * ItemQuantities[i];
+            subtotal += itemTotal;
 
-        Console.WriteLine($"{ItemsOrdered[i]} x {ItemQuantities[i]} - ${itemTotal:F2}");
-    }
+            Console.WriteLine($"{ItemsOrdered[i]} x {ItemQuantities[i]} - ${itemTotal:F2}");
+        }
 
-    double tax = subtotal * 0.06;
+        double tax = subtotal * 0.06;
 
-    Console.WriteLine($"Subtotal: ${subtotal:F2}");
-    Console.WriteLine($"Sales Tax: ${tax:F2}");
-    Console.WriteLine($"Total: ${CalcTotal():F2}");
-    Console.WriteLine("Thank you for your order!");
-    }
+        Console.WriteLine($"Subtotal: ${subtotal:F2}");
+        Console.WriteLine($"Sales Tax: ${tax:F2}");
+        Console.WriteLine($"Total: ${CalcTotal():F2}");
+        Console.WriteLine("Thank you for your order!");
     }
 }
+
     
 
 
