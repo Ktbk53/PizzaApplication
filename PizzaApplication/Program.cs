@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 
-public class main
+public class PizzaApplication
 {
     string[] Pizzas = { "Margherita", "Pepperoni", "Hawaiian", "Veggie", "BBQ Chicken" };
     string[] Drinks = { "Coke", "Pepsi", "Sprite", "Fanta", "Water" };
