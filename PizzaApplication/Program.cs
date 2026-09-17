@@ -37,22 +37,22 @@ public class main
     /*Total & Sales Tax*/
     private double CalcTotal()
     {
-        double Subtotal = 0;
-        double Total;
+        double subtotal = 0;
+        double total;
 
         for (int i = 0; i < ItemCount; i++)
         {
-            Subtotal += ItemPrices[i] * ItemQuantities[i];
+            subtotal += ItemPrices[i] * ItemQuantities[i];
         }
 
-        double SalesTax = Subtotal * 0.06;
-        Total = Subtotal + SalesTax;
+        double salesTax = subtotal * 0.06;
+        total = subtotal + salesTax;
 
-        return Total;
+        return total;
     }
     /* View Order */
 
-    public void ViewOrder()
+    private void ViewOrder()
     {
         Console.WriteLine("\n--- Current Order ---");
 
@@ -67,7 +67,7 @@ public class main
 
     /* Checkout */
 
-    public void Checkout()
+    private void Checkout()
     {
         ViewOrder();
 
@@ -88,7 +88,7 @@ public class main
 
     /* Print Receipt */
 
-    public void PrintReceipt()
+    private void PrintReceipt()
     {
         Console.WriteLine("\n--- RECEIPT ---");
 
