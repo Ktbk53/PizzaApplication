@@ -115,7 +115,7 @@ public class main
                 int pizzaChoice;
 
                 //Pizza Input Check
-                if (int.TryParse(input, out pizzaChoice) && pizzaChoice >= 1 && pizzaChoice <= Pizzas.Length)
+                if (int.TryParse(input, out pizzaChoice) && pizzaChoice >= 1 && pizzaChoice <= 10)
                 {
                     Console.WriteLine($"You selected: {Pizzas[pizzaChoice - 1]} - {PizzaPrices[pizzaChoice - 1]:C}");
                     int quantity;
@@ -171,7 +171,7 @@ public class main
                 //Drinks input check
                 if (int.TryParse(input, out drinkChoice) &&
                     drinkChoice >= 1 &&
-                    drinkChoice <= Drinks.Length)
+                    drinkChoice <= 10)
                 {
                     Console.WriteLine(
                         $"You selected: {Drinks[drinkChoice - 1]} - {DrinkPrices[drinkChoice - 1]:C}"
